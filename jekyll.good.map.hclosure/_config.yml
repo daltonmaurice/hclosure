@@ -1,0 +1,11 @@
+# Site settings
+title: Hospital closures project 
+tag_text: 
+description: 
+ 
+
+
+# Build settings
+markdown: kramdown
+#baseurl: http://users.nber.org/~daltonm/hclose 
+exclude: ["README.md"]
