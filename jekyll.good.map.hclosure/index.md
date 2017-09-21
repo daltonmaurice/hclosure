@@ -1,7 +1,14 @@
 ---
 layout: default
-base-url: /hclose
+base-url: /hclose/
 ---
+
+{% assign lvl = page.url | append:'X' | split:'/' | size %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+
+<link href="{{ relative }}css/main.css" rel="stylesheet" />
+<script src="{{ relative }}scripts/jquery.js"></script>
+
 
 <style>
 .states {
@@ -62,12 +69,13 @@ div.tooltip {
 }        
 </style>
 
+
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="//d3js.org/queue.v1.min.js"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
 
 
-## Mapping all hospitals and the impact of the closed 
+##  How do hospital closures impact patient?
 We map all hospitals in our AMI sample (yellow dots). In addition we map the hospitals that closed in out sample and plot a bubble relative to the size of our IV estimate. Note that IV which are negative (a worse hospital closed in the zip code) are color coded as red. The magnitude is graphed as red. 
 
 Since the IV is defined for zip-hospital pairs. I simply report the zipcode in which the hospital had the largest impact. 

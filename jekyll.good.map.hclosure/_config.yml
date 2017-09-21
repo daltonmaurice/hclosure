@@ -1,5 +1,5 @@
 # Site settings
-title: Hospital closures project 
+title: Are all hospital closures bad?
 tag_text: 
 description: 
  
@@ -7,5 +7,9 @@ description:
 
 # Build settings
 markdown: kramdown
-#baseurl: http://users.nber.org/~daltonm/hclose 
+baseurl: "http://users.nber.org/~daltonm/hclose/"
+url: "http://users.nber.org/~daltonm/hclose/"
+permalink: /:categories/:title/
 exclude: ["README.md"]
+
+
